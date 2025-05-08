@@ -1,0 +1,21 @@
+Win32PrioritySeparation is a setting within the Windows Registry that allows users to configure how the operating system's scheduler allocates processor time to foreground and background processes.
+
+Registry Path: [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\PriorityControl\Win32PrioritySeparation]
+
+Values:
+2A Hex = Short, Fixed , High foreground boost.
+29 Hex = Short, Fixed , Medium foreground boost.
+28 Hex = Short, Fixed , No foreground boost.
+
+26 Hex = Short, Variable , High foreground boost.
+25 Hex = Short, Variable , Medium foreground boost.
+24 Hex = Short, Variable , No foreground boost.
+
+1A Hex = Long, Fixed, High foreground boost.
+19 Hex = Long, Fixed, Medium foreground boost.
+18 Hex = Long, Fixed, No foreground boost.
+
+16 Hex = Long, Variable, High foreground boost.
+15 Hex = Long, Variable, Medium foreground boost.
+14 Hex = Long, Variable, No foreground boost.
+
