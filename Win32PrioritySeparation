@@ -1,4 +1,4 @@
-Win32PrioritySeparation
+Win32PrioritySeparation is a setting within the Windows Registry that allows users to configure how the operating system's scheduler allocates processor resources to foreground and background processes.
 
 Registry Path: [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\PriorityControl\Win32PrioritySeparation]
 
