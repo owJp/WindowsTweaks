@@ -19,12 +19,14 @@ Values:
 15 Hex = Long, Variable, Medium foreground boost.
 14 Hex = Long, Variable, No foreground boost.
 
+2A Hex Value provides the the highest fps and cpu performance.
+28 Hex Value provides the lowest latency and highest response time.
+26 Hex Value provides the best balance of both.
 
 
 
 
 
-
-For more information about Win32PrioritySeparation:
+Credits and for more info about Win32PrioritySeparation:
 https://youtu.be/bqDMG1ZS-Yw?si=GtPHffrZkLhh2-g6
 https://forums.blurbusters.com/viewtopic.php?t=8535
