@@ -20,12 +20,17 @@ Values:
 14 Hex = Long, Variable, No foreground boost.
 
 -------------------------------------------------
-Short and Long is the allocated time of how long a process will run on the CPU before it switches to another process.
-Short: Offers lower latency, more responsivenese for processes, higher interupts and process switching.
-Long: Offers the best for fps and smoothness but can make the foreground process (aka the process that is running and is currently displayed on your screen) feel less responsive.
+Short and Long Quantum is the allocated time of how long a process will run on the CPU before it switches to another process or CPU time.
 
-Fixed and Variable 
+Short: Offers lower latency, and more responsivenese for processes. Higher interupts and faster process switching
+Long: Offers the best for fps and smoothness but can make the foreground and background process feel less responsive. Lower interupts and slower process switching.
+(Foreground is the process that is running and is currently displayed on your screen and background are the process that is running but isnt currently displayed on your screen for example: Discord open on the background)
 
+Fixed and Variable Quantum
+Fixed: Quantum value is stable and is consistent
+Variable: Quantum value adapts to changes and increases
+
+Note: The Information here is not final and might change since I am currently doing more research and tryna dig into the microsoft files for more information.
 -------------------------------------------------
 
 2A Hex Value provides the the highest fps and cpu performance at the expense of some latency.
