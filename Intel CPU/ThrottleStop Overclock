@@ -141,6 +141,9 @@ If 'Speed Shift EPP' is not available or greyed follow 2 and 3.
 19.3. Enable 'C States - AC' then set to off then apply.
 -If 'C States - AC' doesn't disable itself after hitting apply then manually disable it.
 
+#Once done with changes click 'apply', 'ok', and then 'save'.
+
+
 # Note #: Please remember that ThrottleStop must be running for the overclock settings to take effect. If you encounter any issues, such as freezing, closing and restarting your pc will revert your CPU settings back but your ThrottleStop settings will remain saved so running the software will reapply the settings.
 
 # AND PLEASE MONITOR YOUR TEMPS! # 
