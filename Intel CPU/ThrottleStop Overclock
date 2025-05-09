@@ -1,10 +1,15 @@
-ThrottleStop Max CPU Overclock Guide (Works with any Intel CPU)
+ThrottleStop Maximum CPU Performance Overclock Guide (Works with any Intel CPU)
 
 Visual Tuorial: https://youtu.be/O2rUekkGhpg?si=ZBCh69Ncwd08a81a
 
 ThrottleStop is a small application designed to monitor and mitigate CPU throttling, particularly on laptops and can also be used on pc, by allowing users to adjust CPU clock speeds, power limits, voltages and much more, ultimately helping to reduce temperatures or potentially to improve performance. Throttlestop allows you to overclock and undervolt any Intel CPU.
 Download: https://www.techpowerup.com/download/techpowerup-throttlestop/
 
+----------------------------------
+Benchmark:
+CPU Performance Benchmark: https://youtu.be/O2rUekkGhpg?t=85
+Latency Benchmark: **Still need to test**
+----------------------------------
 
 ! Reminder !: When overclocking, make sure to monitor your CPU's temperature so that it doesn't reach higher than 90°C. Anything below 85°C is fine, but if your CPU is staying at temperatures higher than 85°C, then your CPU is going to start having long-term damage and start degrading. I also recommend reading "#HELPFUL INFORMATION TO KNOW" part below before overclocking as it may help you later.
 
@@ -140,12 +145,15 @@ If 'Speed Shift EPP' is not available or greyed follow 2 and 3.
 
 # AND PLEASE MONITOR YOUR TEMPS! # 
 
-#HELPFUL INFORMATION TO KNOW:
 
-In the main interface of throttlestop you will see a table on the left.
+
+
+# HELPFUL INFORMATION TO KNOW #:
+
+*In the main interface of throttlestop you will see a table on the left.
 -Above the table you will see your CPU information with its current voltage, clock multiplier, and clock speed.
 
-Table Contents:
+*Table Contents:
 'FID' shows the current clock speed multiplier of each core.
 
 'C0%' represents the percentage of time that a CPU core is in the active C0 state. A value of 100.0 means the core is fully active, while a value of 50.0 indicates that half of the CPU core is active. A lower value shows that the core is spending more time in idle or low-power states.
@@ -153,3 +161,17 @@ Table Contents:
 'ID' includes the number identification of each individual core.
 
 'C' shows the current temperature, while “Max” indicates the highest temperature the CPU core has reached since the software started.
+
+-Below the table, you will find “PKG Power,” which shows your current CPU wattage consumption alongside your maximum wattage consumption.
+
+*Enabling 'Log File' allows you to monitor, log data about your CPU, and can even show you if your CPU is either thermal throttling or power limit throttling.
+-The log path of where its stored is usually stored in "Logs" folder inside the throttlestop folder.
+-The path location can be found in the options tab at the bottom.
+
+*In 'Limits" Tab
+-In this tab it shows you whats limiting your CPU and it will be highlighted in yellow or red.
+
+
+
+
+# ADDITIONAL INFORMATION #:
