@@ -1,1 +1,46 @@
+ThrottleStop Max CPU Overclock Guide (Works with any Intel CPU)
 
+Visual Tuorial: https://youtu.be/O2rUekkGhpg?si=ZBCh69Ncwd08a81a
+
+ThrottleStop is a small application designed to monitor and mitigate CPU throttling, particularly on laptops and can also be used on pc, by allowing users to adjust CPU clock speeds, power limits, voltages and much more, ultimately helping to reduce temperatures or potentially to improve performance. Throttlestop allows you to overclock and undervolt any Intel CPU.
+Download: https://www.techpowerup.com/download/techpowerup-throttlestop/
+
+
+! Reminder !: When overclocking, make sure to monitor your CPU's temperature so that it doesn't reach higher than 90°C. Anything below 85°C is fine, but if your CPU is staying at temperatures higher than 85°C, then your CPU is going to start having long-term damage and start degrading.
+
+
+Inside the ThrottleStop main interface in the left side:
+1.Enable and set 'Speed Shift EPP' to 0.
+-You can enter values between 0 to 255, where 0 indicates that the CPU will prioritize its maximum frequency or the fastest clock speed, and 255 indicates that the system will prefer operating the CPU at its lowest base clock speed. 
+
+If 'Speed Shift EPP' is not available or greyed follow 2 and 3.
+2. Enable 'Clock Mod' then set to 100% this ensures that your all of your CPU will be utilized and runs at full speed. 
+-A lower percentage will result in reduced clock speeds.
+
+3.Enable 'Set Multiplier' then max it. 'Set Multiplier' controls the CPU clock speed by multipling the base clock. 
+-For example, if you enter a value of 33, the CPU will operate at 3300 MHz (or 3.3 GHz), since the multiplier value is multiplied by 100. (33 x 100 MHz = 3300 MHz)
+-The maximum Multiplier value is determined by your CPU's maximum clock speed. For example, if your CPU has a maximum clock speed of 4.4GHz, then the maximum Multiplier will be 44.
+
+4.Disable 'Power Saver'.
+-'Power Saver' is a feature that allows the CPU to reduce its clock speed to save power.
+
+5.Disable 'Disable Turbo'.
+-'Disable Turbo' disables the turbo boost ability of your CPU which reduces CPU speed.
+
+6.Disable 'SpeedStep'.
+-'SpeedStep' is a power-saving feature that adjusts the clock speed based on your CPU's temperature, and it can lead to throttling.
+
+7.Disable 'BD PROCHOT'.
+-'BD PROCHOT' or Bi-directional Processor Hot, is an emergency feature that sends a signal to your CPU to throttle down speeds in order to protect it from damage. This prevents the CPU from overheating or exceeding power limits but causes throttling.
+
+8.Disable 'C1E'.
+-'C1E' or Enhanced C1 State, is an advanced power-saving state. Based on my testing having this enabled introduces some system latency and slows down your clock speeds.
+
+*Once you have made these changes, don't forget to click "Save."
+
+Inside options tab:
+
+9.Enable 'Disable Chipset Throttle'.
+-'Disable Chipset Throttle' prevents the CPU from sending throttling signals.
+
+10.
