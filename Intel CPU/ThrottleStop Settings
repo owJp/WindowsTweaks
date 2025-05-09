@@ -6,41 +6,150 @@ ThrottleStop is a small application designed to monitor and mitigate CPU throttl
 Download: https://www.techpowerup.com/download/techpowerup-throttlestop/
 
 
-! Reminder !: When overclocking, make sure to monitor your CPU's temperature so that it doesn't reach higher than 90°C. Anything below 85°C is fine, but if your CPU is staying at temperatures higher than 85°C, then your CPU is going to start having long-term damage and start degrading.
+! Reminder !: When overclocking, make sure to monitor your CPU's temperature so that it doesn't reach higher than 90°C. Anything below 85°C is fine, but if your CPU is staying at temperatures higher than 85°C, then your CPU is going to start having long-term damage and start degrading. I also recommend reading "#HELPFUL INFORMATION TO KNOW" part below before overclocking as it may help you later.
+
+# Note #: This doesn't change your BIOS setting for your CPU. Closing the software reverts your CPU settings back and re-openning the software will re-apply the settings inside throttlestop.
+I recommend only using ThrottleStop for when you're gonna use your CPU intensly such as gaming or editing and close the software after when you don't need all the performance and latency.
 
 
-Inside the ThrottleStop main interface in the left side:
-1.Enable and set 'Speed Shift EPP' to 0.
+
+[Inside the ThrottleStop main interface in the left side]:
+
+1. Enable and set 'Speed Shift EPP' to 0.
 -You can enter values between 0 to 255, where 0 indicates that the CPU will prioritize its maximum frequency or the fastest clock speed, and 255 indicates that the system will prefer operating the CPU at its lowest base clock speed. 
 
 If 'Speed Shift EPP' is not available or greyed follow 2 and 3.
 2. Enable 'Clock Mod' then set to 100% this ensures that your all of your CPU will be utilized and runs at full speed. 
 -A lower percentage will result in reduced clock speeds.
 
-3.Enable 'Set Multiplier' then max it. 'Set Multiplier' controls the CPU clock speed by multipling the base clock. 
+3. Enable 'Set Multiplier' then max it. 'Set Multiplier' controls the CPU clock speed by multipling the base clock. 
 -For example, if you enter a value of 33, the CPU will operate at 3300 MHz (or 3.3 GHz), since the multiplier value is multiplied by 100. (33 x 100 MHz = 3300 MHz)
 -The maximum Multiplier value is determined by your CPU's maximum clock speed. For example, if your CPU has a maximum clock speed of 4.4GHz, then the maximum Multiplier will be 44.
 
-4.Disable 'Power Saver'.
+4. Disable 'Power Saver'.
 -'Power Saver' is a feature that allows the CPU to reduce its clock speed to save power.
 
-5.Disable 'Disable Turbo'.
+5. Disable 'Disable Turbo'.
 -'Disable Turbo' disables the turbo boost ability of your CPU which reduces CPU speed.
 
-6.Disable 'SpeedStep'.
+6. Disable 'SpeedStep'.
 -'SpeedStep' is a power-saving feature that adjusts the clock speed based on your CPU's temperature, and it can lead to throttling.
 
-7.Disable 'BD PROCHOT'.
+7. Disable 'BD PROCHOT'.
 -'BD PROCHOT' or Bi-directional Processor Hot, is an emergency feature that sends a signal to your CPU to throttle down speeds in order to protect it from damage. This prevents the CPU from overheating or exceeding power limits but causes throttling.
 
-8.Disable 'C1E'.
+8. Disable 'C1E'.
 -'C1E' or Enhanced C1 State, is an advanced power-saving state. Based on my testing having this enabled introduces some system latency and slows down your clock speeds.
 
-*Once you have made these changes, don't forget to click "Save."
+#Once you have made these changes, don't forget to click "Save."
 
-Inside options tab:
 
-9.Enable 'Disable Chipset Throttle'.
+
+[Inside the options tab]:
+
+9. Enable 'Disable Chipset Throttle'.
 -'Disable Chipset Throttle' prevents the CPU from sending throttling signals.
 
-10.
+10. Set 'Timer Resolution' to 0.50.
+-'Timer Resolution' is how often your processor updates/refreshes.
+
+11. Set 'AC Timer Res' to 0.
+-
+
+
+
+[Inside the FIVR tab]:
+
+12. In Turbo Ratio Limits set 'Turbo' and 'Ratio' to the highest value your CPU allows.
+-'Ratio' is also known as the 'Clock Multiplier'.
+-'Turbo' is the Clock Multiplier for turbo boost.
+
+13. In Cache Ratio set 'Min' box value the same as your 'Max'.
+
+14. In "Miscellaneous":
+14.1. Disable 'TVB'.
+-'TVB' or Thermal Velocity Boost, is a feature that automatically increases clock frequency above single-core and multi-core based on the headroom and temperature of your CPU but when your CPU hits over the temperature limit it will throttle down. Having this disabled prevents TVB from throttling down your clock speeds.
+
+14.2. Diable 'V-Max Stress'.
+-'V-Max Stress' prevents your CPU voltage from getting too high but could cause your CPU to throttle and slow down.
+
+14.3. Disable 'Ring Down Bin'.
+-'Ring Down Bin' reduces the CPU cache speed to 300 MHz less than the core speed.
+
+14.4. Enable 'Overclock'. (OPTIONAL)
+
+#Once done with changes click 'apply' then 'ok'.
+
+
+
+[Inside the TPL tab]:
+
+15. In "MSR Power Limit Controls":
+15.1. Disable 'Disable Controls'.
+-This allows you to control the power limits.
+
+15.2. Disable 'Sync MMIO'.
+-
+
+15.3. Disable 'Clamp' for both 'Long Power PL1' and 'Short Power PL2'.
+-'Clamp' forces the CPU to throttle and slow down once it reaches power limit. This leads to power limit throttling.
+
+15.4. Set 'Long Power PL1' and 'Short Power PL2' box values to 10-20 watts higher than your CPU's power limit. This helps prevent the CPU from throttling down and reaching the limit.
+-'Long Power PL1' is like the long term power limit while 'Short Power PL2' is the short term power limit.
+*Currently in my setting, I have both values set to 1029 which is equal to 1029 watts, which I believe is the maximum. Since this value is high, the CPU cannot reach the limit, and as a result, there is no throttling occurring though I don't recommend setting it this high.
+
+15.5. Max the 'Turbo Time Limit'.
+-'Turbo Time Limit' is how long the CPU can switch between PL1 and PL2.
+*From my testing having 'Turbo Time Limit' set low introduces some latency while setting the value high gives lower latency though only a bit but im still trying to do a thorough test on this.
+
+15.6. Then enable the box below the 'Lock'.
+-This is so that the setting doesn't get changed and remains.
+
+16. In "Global Settings":
+16.1. Set both of the boxes for 'Power Limit 4' to 0 then enable 'Lock'.
+
+16.2. Disable 'PP0 Power Limit'.
+
+17. In "Turbo Power Limits":
+17.1. Enable the Lock box for 'MMIO'.
+
+#Once done with changes click 'apply' then 'ok'.
+
+
+
+[Inside the C1 tab]:
+*A table will pop up on the left and then at the bottom you will see a red text saying "Package C States" next to it on the right click the button arrow '>>' and it will show more options next to the table.
+
+18. In "Package C State Loaded":
+18.1 Next to 'Request' set the C-State to C1 or C0 if it allows you.
+-By setting it to C1 the CPU can transition between C1 to C0 state quickly making the CPU more responsive and active.
+-Higher C States, such as C2 to C7, represent deeper idle states. If you set your system to C7, it will take longer for the CPU cores to reactivate, potentially causing performance delays and increased latency.
+-C0 is the fastest state.
+
+19. In "Demotion Undemotion":
+19.1. Disable anything that has 'Demotion'.
+-'Demotion' allows the CPU to enter deeper idle states for power saving.
+
+19.2. Enable anything that has 'Undemotion'.
+-'Undemotion' allows the CPU to be ready and enter lighter states such as C1 and C0 for performance.
+
+19.3. Enable 'C States - AC' then set to off then apply.
+-If 'C States - AC' doesn't disable itself after hitting apply then manually disable it.
+
+# Note #: Please remember that ThrottleStop must be running for the overclock settings to take effect. If you encounter any issues, such as freezing, closing and restarting your pc will revert your CPU settings back but your ThrottleStop settings will remain saved so running the software will reapply the settings.
+
+# AND PLEASE MONITOR YOUR TEMPS! # 
+
+#HELPFUL INFORMATION TO KNOW:
+
+In the main interface of throttlestop you will see a table on the left.
+-Above the table you will see your CPU information with its current voltage, clock multiplier, and clock speed.
+
+Table Contents:
+'FID' shows the current clock speed multiplier of each core.
+
+'C0%' represents the percentage of time that a CPU core is in the active C0 state. A value of 100.0 means the core is fully active, while a value of 50.0 indicates that half of the CPU core is active. A lower value shows that the core is spending more time in idle or low-power states.
+
+'ID' includes the number identification of each individual core.
+
+'C' shows the current temperature, while “Max” indicates the highest temperature the CPU core has reached since the software started.
